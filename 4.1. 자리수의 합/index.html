@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(n, arr) {
+        let max = 0;
+        let maxIndex = 0;
+        let answer = 0;
+
+        for (let i = 0; i < arr.length; i++) {
+          let sum = 0;
+          let splittedEl = arr[i].toString().split(""); // ["1", "2", "8"]
+          splittedEl.forEach((letters) => {
+            sum += Number(letters);
+          });
+          if (sum > max) {
+            max = sum;
+            maxIndex = i;
+          } else if (sum === max) {
+            if (arr[i] >= arr[maxIndex]) maxIndex = i;
+          }
+        }
+        answer = arr[maxIndex];
+
+        return answer;
+      }
+
+      let arr = [128, 460, 603, 40, 521, 137, 123];
+      console.log(solution(7, arr));
+    </script>
+  </body>
+</html>
