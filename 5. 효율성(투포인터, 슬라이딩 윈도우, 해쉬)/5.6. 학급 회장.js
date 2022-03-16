@@ -13,4 +13,5 @@ function solution(s) {
 }
 
 let str = "BACBACCACCBDEDE";
-console.log(solution(str));
+let str2 = "AAAAAABBBBBBBBBB";
+console.log(solution(str2));
