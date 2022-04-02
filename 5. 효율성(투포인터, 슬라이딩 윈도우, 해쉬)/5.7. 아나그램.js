@@ -5,7 +5,7 @@ function solution(str1, str2) {
     else countObj[str1[i]]++;
   }
   for (let i = 0; i < str2.length; i++) {
-    // 아예 새로운 문자가 있는 경우
+    // 아예 새로운 문자가 있는 경우 or 0 일 때
     if (!countObj[str2[i]]) return "NO";
     else countObj[str2[i]]--;
   }
